@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1 ref="square">Home</h1>
+      <h1>Home</h1>
        <div class="block" ref="square"></div>
        <button @click="go">Click Here to Animate</button>
        <router-link :to="{ name: 'Main' }">Main</router-link> |
@@ -9,7 +9,14 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
+  setup() {
+    const square = ref(null)
+
+    return { square };
+  },
+
   methods: {
     go() {
        anime({                                      // <-- using imported
