@@ -6,7 +6,7 @@ function go(){
   //console.log(this.$refs.square)
   anime({                                      // <-- using imported
         targets: '.block',
-        translateX: 500
+        translateX: 30
       });
 }
 
